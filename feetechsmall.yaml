@@ -160,10 +160,10 @@ CheekSquintRight:
 EyeTurnLeft:
   acceleration: 0
   group: Eyes
-  init: 648
+  init: 483
   labelleft: EyeTurnLeft
-  max: 762
-  min: 535
+  max: 626
+  min: 340
   motor_id: 14
   pau:
     function:
@@ -184,10 +184,10 @@ EyeTurnLeft:
 EyeTurnRight:
   acceleration: 0
   group: Eyes
-  init: 557
+  init: 567
   labelleft: EyeTurnRight
-  max: 690
-  min: 425
+  max: 698
+  min: 436
   motor_id: 15
   pau:
     function:
@@ -208,10 +208,10 @@ EyeTurnRight:
 EyesUpDown:
   acceleration: 0
   group: Eyes
-  init: 534
+  init: 652
   labelleft: EyesUpDown
-  max: 642
-  min: 376
+  max: 772
+  min: 532
   motor_id: 16
   pau:
     function:
