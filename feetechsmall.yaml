@@ -1,0 +1,595 @@
+BrowCenter:
+  acceleration: 0.1
+  group: Brow
+  init: 505
+  labelleft: BrowCenter
+  max: 731
+  min: 309
+  motor_id: 2
+  pau:
+    function:
+    - imin: 0.46445497630331756
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: brow_center_DN;brow_center_UP
+  sort_no: 3
+  speed: 0.3
+BrowInnerLeft:
+  acceleration: 0.1
+  group: Brow
+  init: 501
+  labelleft: BrowInnerLeft
+  max: 649
+  min: 298
+  motor_id: 1
+  pau:
+    function:
+    - imin: 0.5783475783475783
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: brow_inner_UP.L;brow_inner_DN.L
+  sort_no: 2
+  speed: 0.3
+BrowInnerRight:
+  acceleration: 0.1
+  group: Brow
+  init: 432
+  labelleft: BrowInnerRight
+  max: 746
+  min: 251
+  motor_id: 3
+  pau:
+    function:
+    - imin: 0.3656565656565657
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: brow_inner_DN.R;brow_inner_UP.R
+  sort_no: 4
+  speed: 0.3
+BrowOuterLeft:
+  acceleration: 0.1
+  group: Brow
+  init: 507
+  labelleft: BrowOuterLeft
+  max: 699
+  min: 200
+  motor_id: 0
+  pau:
+    function:
+    - imin: 0.6152304609218436
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: brow_outer_UP.L;brow_outer_DN.L
+  sort_no: 1
+  speed: 0.3
+BrowOuterRight:
+  acceleration: 0.1
+  group: Brow
+  init: 511
+  labelleft: BrowOuterRight
+  max: 823
+  min: 301
+  motor_id: 4
+  pau:
+    function:
+    - imin: 0.40229885057471265
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: brow_outer_DN.R;brow_outer_UP.R
+  sort_no: 5
+  speed: 0.3
+CheekSquintLeft:
+  acceleration: 0.1
+  group: Eyes
+  init: 524
+  labelleft: CheekSquintLeft
+  max: 524
+  min: 304
+  motor_id: 5
+  pau:
+    function:
+    - max: 0
+      min: 1
+      name: linear
+    parser:
+      name: fsshapekey
+      shapekey: wince.L
+  sort_no: 6
+  speed: 0.3
+CheekSquintRight:
+  acceleration: 0.1
+  group: Eyes
+  init: 614
+  labelleft: CheekSquintRight
+  max: 841
+  min: 614
+  motor_id: 6
+  pau:
+    function:
+    - max: 1
+      min: 0
+      name: linear
+    - name: linear
+      scale: 1
+      translate: 0
+    parser:
+      name: fsshapekey
+      shapekey: wince.R
+  sort_no: 7
+  speed: 0.3
+EyeTurnLeft:
+  acceleration: 0
+  group: Eyes
+  init: 648
+  labelleft: EyeTurnLeft
+  max: 762
+  min: 535
+  motor_id: 14
+  pau:
+    function:
+    - imin: 0.38283828382838286
+      name: weightedsum
+      terms:
+      - imax: 1
+        max: 0.44
+        min: 0
+      - imax: 0
+        max: -0.5
+        min: 0
+    parser:
+      name: getproperty
+      property: m_eyeGazeLeftYaw;m_eyeGazeLeftYaw
+  sort_no: 40
+  speed: 0
+EyeTurnRight:
+  acceleration: 0
+  group: Eyes
+  init: 557
+  labelleft: EyeTurnRight
+  max: 690
+  min: 425
+  motor_id: 15
+  pau:
+    function:
+    - imin: 0.20179372197309417
+      name: weightedsum
+      terms:
+      - imax: 1
+        max: 0.44
+        min: 0
+      - imax: 0
+        max: -0.5
+        min: 0
+    parser:
+      name: getproperty
+      property: m_eyeGazeRightYaw;m_eyeGazeRightYaw
+  sort_no: 41
+  speed: 0
+EyesUpDown:
+  acceleration: 0
+  group: Eyes
+  init: 534
+  labelleft: EyesUpDown
+  max: 642
+  min: 376
+  motor_id: 16
+  pau:
+    function:
+    - max: 1
+      min: -0.6
+      name: linear
+    parser:
+      name: getproperty
+      property: m_eyeGazeLeftPitch
+  sort_no: 42
+  speed: 0
+FrownLeft:
+  acceleration: 0.1
+  group: Lips
+  init: 500
+  labelleft: FrownLeft
+  max: 706
+  min: 500
+  motor_id: 32
+  pau:
+    function:
+    - max: 1
+      min: 0
+      name: linear
+    parser:
+      name: fsshapekey
+      shapekey: lips-frown.L
+  sort_no: 71
+  speed: 0.3
+FrownRight:
+  acceleration: 0.1
+  group: Lips
+  init: 544
+  labelleft: FrownRight
+  max: 544
+  min: 301
+  motor_id: 33
+  pau:
+    function:
+    - max: 0
+      min: 1
+      name: linear
+    parser:
+      name: fsshapekey
+      shapekey: lips-frown.R
+  sort_no: 72
+  speed: 0.3
+LipsStretchLeft:
+  acceleration: 0.1
+  group: Lips
+  init: 486
+  labelleft: LipsStretchLeft
+  max: 664
+  min: 431
+  motor_id: 26
+  pau:
+    function:
+    - imin: 0.23605150214592274
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: lips-narrow.L;lips-wide.L
+  sort_no: 67
+  speed: 0.3
+LipsStretchRight:
+  acceleration: 0.1
+  group: Lips
+  init: 489
+  labelleft: LipsStretchRight
+  max: 603
+  min: 349
+  motor_id: 27
+  pau:
+    function:
+    - imin: 0.5511811023622047
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: lips-wide.R;lips-narrow.R
+  sort_no: 68
+  speed: 0.3
+LowerLidLeft:
+  acceleration: 0
+  group: Eyes
+  init: 552
+  labelleft: LowerLidLeft
+  max: 592
+  min: 526
+  motor_id: 12
+  pau:
+    function:
+    - imin: 0.3939393939393939
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: eye-flare.LO.L;eye-blink.LO.L
+  sort_no: 33
+  speed: 0
+LowerLidRight:
+  acceleration: 0
+  group: Eyes
+  init: 474
+  labelleft: LowerLidRight
+  max: 517
+  min: 441
+  motor_id: 13
+  pau:
+    function:
+    - imin: 0.4342105263157895
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: eye-blink.LO.R;eye-flare.LO.R
+  sort_no: 34
+  speed: 0
+LowerLipCenter:
+  acceleration: 0.1
+  group: Lips
+  init: 477
+  labelleft: LowerLipCenter
+  max: 553
+  min: 373
+  motor_id: 24
+  pau:
+    function:
+    - imin: 0.5777777777777777
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: lip-DN.C.DN;lip-DN.C.UP
+  sort_no: 65
+  speed: 0.3
+LowerLipLeft:
+  acceleration: 0.1
+  group: Lips
+  init: 442
+  labelleft: LowerLipLeft
+  max: 466
+  min: 359
+  motor_id: 23
+  pau:
+    function:
+    - imin: 0.7757009345794392
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: lip-DN.L.DN;lip-DN.L.UP
+  sort_no: 64
+  speed: 0.3
+LowerLipRight:
+  acceleration: 0.1
+  group: Lips
+  init: 463
+  labelleft: LowerLipRight
+  max: 515
+  min: 394
+  motor_id: 25
+  pau:
+    function:
+    - imin: 0.5702479338842975
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: lip-DN.R.UP;lip-DN.R.DN
+  sort_no: 66
+  speed: 0.3
+SneerLeft:
+  acceleration: 0
+  group: Eyes
+  init: 588
+  labelleft: SneerLeft
+  max: 588
+  min: 469
+  motor_id: 30
+  pau:
+    function:
+    - max: 0
+      min: 1
+      name: linear
+    parser:
+      name: fsshapekey
+      shapekey: sneer.R
+  sort_no: 69
+  speed: 0
+SneerRight:
+  acceleration: 0
+  group: Eyes
+  init: 505
+  labelleft: SneerRight
+  max: 512
+  min: 505
+  motor_id: 31
+  pau:
+    function:
+    - max: 1
+      min: 0
+      name: linear
+    parser:
+      name: fsshapekey
+      shapekey: sneer.R
+  sort_no: 70
+  speed: 0
+Tongue:
+  acceleration: 0.1
+  group: Lips
+  init: 508
+  labelleft: Tongue
+  max: 523
+  min: 494
+  motor_id: 28
+  sort_no: 80
+  speed: 0.3
+UpperLidLeft:
+  acceleration: 0
+  group: Eyes
+  init: 623
+  labelleft: UpperLidLeft
+  max: 651
+  min: 536
+  motor_id: 10
+  pau:
+    function:
+    - imin: 0.7565217391304347
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: eye-blink.UP.L;eye-flare.UP.L
+  sort_no: 31
+  speed: 0
+UpperLidRight:
+  acceleration: 0
+  group: Eyes
+  init: 403
+  labelleft: UpperLidRight
+  max: 502
+  min: 360
+  motor_id: 11
+  pau:
+    function:
+    - imin: 0.3028169014084507
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: eye-flare.UP.R;eye-blink.UP.R
+  sort_no: 32
+  speed: 0
+UpperLipCenter:
+  acceleration: 0.1
+  group: Lips
+  init: 530
+  labelleft: UpperLipCenter
+  max: 648
+  min: 453
+  motor_id: 21
+  pau:
+    function:
+    - imin: 0.39487179487179486
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: lip-UP.C.UP;lip-UP.C.DN
+  sort_no: 62
+  speed: 0.3
+UpperLipLeft:
+  acceleration: 0.1
+  group: Lips
+  init: 485
+  labelleft: UpperLipLeft
+  max: 597
+  min: 356
+  motor_id: 20
+  pau:
+    function:
+    - imin: 0.5352697095435685
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: lip-UP.L.DN;lip-UP.L.UP
+  sort_no: 61
+  speed: 0.3
+UpperLipRight:
+  acceleration: 0.1
+  group: Lips
+  init: 475
+  labelleft: UpperLipRight
+  max: 625
+  min: 453
+  motor_id: 22
+  pau:
+    function:
+    - imin: 0.12790697674418605
+      name: weightedsum
+      terms:
+      - imax: 0
+        max: 1
+        min: 0
+      - imax: 1
+        max: 1
+        min: 0
+    parser:
+      name: fsshapekey
+      shapekey: lip-UP.R.UP;lip-UP.R.DN
+  sort_no: 63
+  speed: 0.3
